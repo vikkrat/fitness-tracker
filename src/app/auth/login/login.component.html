@@ -1,0 +1,40 @@
+<p>login works!</p>
+
+<section class="signup-form">
+    <form fxLayout="column" fxLayoutAlign="center center"
+          fxLayoutGap="10px"
+          [formGroup]="loginForm"
+          (ngSubmit)="onSubmit()">
+        <mat-form-field hintLabel="Please, enter Your e-mail.">
+            <input matInput
+                   type="email"
+                   placeholder="Your email"
+                   formControlName="email"
+                   name="email"
+                   required
+                   email
+            >
+            <!-- <mat-error *ngIf="emailInput.hasError('required')">Field must not be empty.</mat-error>
+            <mat-error *ngIf="emailInput.hasError('email')">E-mail is invalid.</mat-error> -->
+        </mat-form-field>
+        <mat-form-field hintLabel="Please, enter Your password.">
+            <input matInput
+                   type="password"
+                   placeholder="Your password"
+                   formControlName="password"
+                   name="password"
+                   required
+                   minlength="6"
+            >
+            <mat-error>Has to be at least 6 characters long.</mat-error>
+        </mat-form-field>
+        <button type="submit"
+                mat-raised-button
+                color="primary"
+                [disabled]="loginForm.invalid"
+                *ngIf="!isLoading"
+            >Log In
+        </button>
+      <mat-spinner *ngIf="isLoading"></mat-spinner>
+    </form>
+</section>

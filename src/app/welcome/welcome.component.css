@@ -1,0 +1,9 @@
+.welcome{
+    min-height: 100%;
+    text-align: center;
+    padding: 5%;
+}
+
+section h1 {
+    color: #6945b7;
+}

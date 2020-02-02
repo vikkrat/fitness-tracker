@@ -1,0 +1,23 @@
+a {
+    text-decoration: none;
+    color: white;
+}
+
+a:hover,
+a:active,
+mat-list-item:hover,
+mat-list-item:active {
+    color: #4da3dd;
+}
+
+.navigation-items{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+}
+
+.nav-caption {
+    display: inline-block;
+    padding-left: 8px;
+}
